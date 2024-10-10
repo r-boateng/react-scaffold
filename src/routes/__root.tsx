@@ -1,6 +1,7 @@
 import { Button } from '@mantine/core';
-import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
+import { createRootRoute, Outlet } from '@tanstack/react-router';
 import React, { Suspense } from 'react';
+import { RouterLink } from '../components/primitives/RouterLink';
 
 /**
  * @ lazy load - development env only
@@ -22,12 +23,12 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <div className="p-2 flex gap-2">
-        <Link to="/">
+        <RouterLink to="/">
           <Button variant="text">Home</Button>
-        </Link>{' '}
-        <Link to="/about">
+        </RouterLink>{' '}
+        <RouterLink to="/about">
           <Button variant="text">About</Button>
-        </Link>
+        </RouterLink>
       </div>
       <hr />
       <Outlet />
