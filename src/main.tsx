@@ -1,4 +1,7 @@
 import { createTheme, MantineProvider } from '@mantine/core';
+import '@mantine/core/styles.css';
+import { Notifications } from "@mantine/notifications";
+import '@mantine/notifications/styles.css';
 import { createRouter, RouterProvider } from '@tanstack/react-router';
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
@@ -17,7 +20,6 @@ declare module '@tanstack/react-router' {
 }
 
 // Load custom theme to provider
-import { Notifications } from '@mantine/notifications';
 import customTheme from './theme/mantineTheme';
 const theme = createTheme({ ...customTheme })
 
